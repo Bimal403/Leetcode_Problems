@@ -1,4 +1,4 @@
-// The Two Sum problem requires finding two numbers in an array that sum up to a specific target value. 
+// The Two Sum problem requires finding index of two numbers in an array that sum up to a specific target value. 
 
 function TwoSumProblem(array,target)
 {
@@ -25,3 +25,24 @@ function TwoSumProblem(array,target)
 
 TwoSumProblem([3,7,1,15,42],45);
 
+
+
+//using hash map
+
+function TwoSumProblem1(array,target){
+
+    let hashedmap=new Map();
+    for(let i=0;i<array.length;i++)
+    {
+        let complement=target-array[i];
+        if(hashedmap.has(complement))
+        {
+            console.log([hashedmap.get(complement),i]);
+            return;
+        }
+        hashedmap.set(array[i],i);
+    }
+    return  null;
+
+}
+TwoSumProblem1([1,2,2,3,4,5,6],4);
