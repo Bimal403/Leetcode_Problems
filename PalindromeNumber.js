@@ -11,11 +11,8 @@ function PalindromeChecker(num) {
     rev = rev * 10 + (num % 10);
     num = Math.floor(num / 10);
   }
-  if (originalNum != rev) {
-    return false;
-  }
-  return true;
+  return originalNum === rev;
 }
 
-const answer = PalindromeChecker(101);
+const answer = PalindromeChecker(1234554321);
 console.log(answer);
