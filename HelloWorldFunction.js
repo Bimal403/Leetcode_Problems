@@ -1,14 +1,9 @@
 // Write a function createHelloWorld. It should return a
 //  new function that always returns "Hello World".
 
-var createHelloWorld=function()
+var createHelloWorld = function () {
+  return () => "Hello World";
+};
 
-{
-    return function()
-    {
-        console.log("Hello World!!");
-    }
-}
-
-const output=createHelloWorld();
-output();
+const output = createHelloWorld();
+console.log(output());
